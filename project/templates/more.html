@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<script>
+         document.addEventListener('DOMContentLoaded', function() {
+                let choise= document.querySelector(".choose") ;
+                choise.addEventListener('click' ,  function() {
+                let vara = document.querySelector(".ted")
+                console.log(choise.value);
+                if (choise.value == 'Yes')
+                   {
+
+                         vara.style.display = "block" ;
+                         let option = document.querySelector("#enough1")
+                         option.disabled = false;
+                         option = document.querySelector("#enough2")
+                         option.disabled = false;
+                         option = document.querySelector("#enough3")
+                         option.disabled = false;
+                         option = document.querySelector("#enough4")
+                         option.disabled = false;
+
+
+                   }
+
+                    } ) ;
+
+
+                let choise1= document.querySelector(".choose1") ;
+                choise1.addEventListener('click' ,  function() {
+                let vara = document.querySelector(".ted")
+                console.log(choise.value);
+                if (choise.value == 'Yes')
+                   {
+
+                         vara.style.display = "none" ;
+                         let option = document.querySelector("#enough1")
+                         option.disabled = true;
+                         option = document.querySelector("#enough2")
+                         option.disabled = true;
+                         option = document.querySelector("#enough3")
+                         option.disabled = true;
+                         option = document.querySelector("#enough4")
+                         option.disabled = true;
+
+
+                   }
+
+
+            } ) ;
+
+
+             setInterval(function () {
+             let inputs=document.querySelectorAll("input")
+             let allinput=true ;
+             for (let input of inputs )
+              {
+
+                     if(! input.value)
+                       {
+                           allinput=false ;
+                           let aktiv = document.querySelector(".aktiv")
+                           aktiv.disabled = true ; ;
+                       }
+
+              }
+
+              let select = document.querySelector(".choise")
+              let allselect= false;
+              if  ( select.value != "z"  )
+                   {
+                        allselect = true ;
+                     }
+              if (  allselect &&  allinput)
+                 {
+                    let aktiv = document.querySelector(".aktiv")
+                    aktiv.disabled = false ;
+
+                 }
+          } , 10);
+
+
+         });
+
+</script>
+
+    <form action="/more" method="post">
+     <div  class="log">
+     <div class="right">
+        <h4 class=" white mb-4"> <strong> Persönliche  Informationen   </strong> </h4>
+        <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="nachname" placeholder="Firstname" type="text">
+        </div>
+
+        <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="vorname" placeholder="Secondname" type="text">
+        </div>
+
+         <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="geburt" placeholder="Birthday" type="date">
+        </div>
+
+        <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="geburtsort" placeholder="Birthplace" type="text">
+        </div>
+
+
+       <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="nummer" placeholder="Phone number" type="text">
+        </div>
+
+        <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="email" placeholder="Email" type="email">
+        </div>
+
+      </div>
+
+
+
+      <div class= " container left">
+        <h4 class=" white mb-3" >  <strong>  Andere Informationen   </strong>  </h4>
+        <div   class="mb-3" >
+             <label  class="weak   mb-2" > Have you ever learn German ? </label> </br>
+             <input  class=  " choose mx-auto w-auto" type="radio" name="einmal" value="Yes"> Yes
+             <input  class=  " choose1 mb-3 cmx-auto w-auto" type="radio" name="einmal" value="No"> No
+        </div>
+        <div  class= "   ted  container  mb-5  " >
+              <select   name="level">
+                <option selected  desabled> Choose  your Level </option>
+                <option  value= "A1" > A1 </option>
+                <option value= "A2" > A2 </option>
+                <option  value= "B1" > B1 </option>
+                <option  value= "B2" > B2 </option>
+                <option  value= "C1" > C1 </option>
+
+              </select>
+        </div>
+
+         <div class=" container mb-5">
+             <label  class= "   mb-2 weak ">   What is your first language ? </label>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="sprache" placeholder="First language" type="text">
+        </div>
+
+
+        <div class="  container mb-3">
+             <label  class= " mb-2 "weak ">   What course do you want to attend in our Institut ? </label> </br>
+              <select   class ="choise" name="course">
+                <option  value= "z" selected  disabled>  Choose  your course</option>
+                <option value= "A1" > A1-Course </option>
+                <option id="enough1" value= "A2" > A2_Course </option>
+                <option id="enough2" value= "B1" > B1-Course </option>
+                <option id="enough3" value= "B2" > B2-Course </option>
+                <option id="enough4" value= "C1" > C1-Course </option>
+
+              </select>
+        </div>
+
+      </div>
+      </div>
+
+        <button class=" aktiv black mt-5 btn btn-primary" type="submit" disabled> Bestätigen </button>
+    </form>
+
+
+{% endblock %}

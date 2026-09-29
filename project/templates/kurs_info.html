@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+     Info
+{% endblock %}
+{% block main %}
+ <h2>  <strong> Willkommen  bei {{key}}-Kurs  </strong> </h2>
+
+<ul>
+ <div  style="margin-top:50px"  class="mb-5">
+ <li>
+ <h3 style="text-align:left"><strong> <a  href="/programm"> Programmm</a> </strong> </h3>
+ </li>
+ </div>
+ <div   class="mb-5">
+ <li>
+ <h3 style="text-align:left"><strong> Preis: </strong>{{ kurs["Preis"]}} $ </h3>
+ </li>
+ </div>
+
+ <div  class="mb-5">
+ <li>
+ <h3 style="text-align:left"><strong> Zeitraum  </strong>: Von  {{ kurs["Zeitraum"]["von"] }}   bis {{ kurs["Zeitraum"]["bis"] }} </h3>
+ </li>
+ </div>
+
+ <div  class="mb-5">
+ <li>
+ <h3 style="text-align:left"><strong> Ort </strong>:{{kurs["Ort"]}}</h3>
+ </li>
+ </div>
+</ul>
+<form action="/buchen" method="post" >
+<class  class="mb-3">
+<button class="mb-1 black btn btn-primary" type="submit">Buchen</button>
+ {% if message %}
+             <p style = "color:green ;" >  <strong> {{message}}  </strong>   </p>
+ {%  endif %}
+
+ {% if messages %}
+             <p style = "color:red ;" >  <strong> {{messages}}  </strong>   </p>
+ {%  endif %}
+</class>
+</form>
+{% endblock %}

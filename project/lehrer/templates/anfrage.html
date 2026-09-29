@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Nutzer Name
+{% endblock %}
+{% block main %}
+<h2 class="mb-5"> <strong><u>Teilnahmesanfragen am {{info["course"]}}-Kurs </u></strong> </h2>
+<ol>
+    {% if  anfragen %}
+    {% for anfrage in anfragen   %}
+       <div  style="display:flex ; margin-top:100px;">
+        <div  class="mx-4">
+        <li class="mb-4">   <h5  style="margin-left:20px;">  {{anfrage["name"]}} </h5>
+        </div>
+        <div style="display:flex">
+              <div  class="mx-3">
+              <form action="/anfrage"  method="post">
+              <input  type="hidden" value={{anfrage["name"]}} name="bestaetigung">
+              <input  type="hidden" value={{anfrage["key"]}} name="key">
+              <button style="background-color:green ; border:1px solid green;" class=" size4 btn btn-primary"  name= type="submit">Bestätigen</button>
+              </form>
+              </div>
+
+              <div>
+              <form action="/anfrage"  method="post">
+              <input  type="hidden" value={{anfrage["name"]}} name="entfernung">
+               <input  type="hidden" value={{anfrage["key"]}} name="key">
+              <button class=" size3 black btn btn-primary"  name= type="submit">Raus</button>
+              </form>
+              </div>
+        </li>
+        </div>
+        </div>
+        {%  endfor %}
+        {% else %}
+        <h4 style="margin-top:200px;" class="white"> <strong> Keine Anfrage verfügbar ! </strong> </h4>
+        {% endif %}
+
+
+</ol>
+
+{% endblock %}

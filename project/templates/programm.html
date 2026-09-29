@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Programm
+{% endblock %}
+
+{% block main %}
+
+<h2   class=" white mb-5">  Organization und Ziele   {{key}}-kurs
+</h2>
+<ul ;" class="mb-3 link">
+ <li><strong>Lehrer(in): </strong>{{kurs["teacher"]}}</li>
+ <li><strong>Uhrzeiten</strong></br>
+     <ul>
+        <li> <strong> Kursszeiten:</strong> {{kurs["course_time"]}}</li>
+        <li> <strong> Übungszeiten:</strong>{{kurs["exercise_time"]}}</li>
+     </ul>
+</li>
+</ul>
+
+<h4  class="mb-2  link"> Topics </h4>
+<ul  class="mb-3 link" >
+    {%  for topic in kurs["topics"]  %}
+          <li> <strong> {{topic}} </strong></li>
+    {% endfor %}
+</ul>
+
+<h4  class="mb-2  link"> Grammatik </h4>
+<ul  class="mb-3 link" >
+    {%  for grammar in kurs["grammar"]  %}
+          <li> <strong> {{grammar}} </strong></li>
+    {% endfor %}
+</ul>
+
+<h4  class="mb-2  link"> Erwartete Fähigkeiten am Ende des Kurs </h4>
+<ul  class="mb-3 link" >
+    {%  for skill in kurs["skills"]  %}
+          <li> <strong> {{skill}} </strong></li>
+    {% endfor %}
+</ul>
+
+
+
+
+<h4  class="mb-2  link"> Ziele </h4>
+<ul  class="mb-3 link" >
+    {%  for goal in kurs["goals"]  %}
+          <li> <strong> {{goal}} </strong></li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Nutzer Name
+{% endblock %}
+{% block main %}
+<h2 style="margin-bottom:80px" class="white"><strong>  Überblick über die Teilnehmer  </strong></h2>
+<h4 class="mb-4" style="text-align:left" ><u><strong>Teilnehmer</strong></u></h4>
+<ul style="text-align:left">
+    {% if Daten %}
+    {% for element in Daten %}
+    {% if element["choise"] == "teilnehmen" %}
+    <li class="mb-2">
+        <form action="/p_teilnahme" method="post">
+            <input  type="hidden" value ={{element["id"]}}   name="prüfung_student">
+            <button  class="btn-link-style" type="submit">{{element["name"]}}</button>
+        </form>
+    </li>
+    {% endif %}
+    {%  endfor %}
+    {% endif %}
+
+</ul>
+
+{% endblock %}

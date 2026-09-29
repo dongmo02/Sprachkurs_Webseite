@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block title %}   First  Page  {%  endblock %}
+
+{%  block main  %}
+ <div class="mb-5">
+ <h3 class="mb-2"    style="text-align:left ;"> <strong>Virtueller Campus:eLearning-System  von Dem Sprachinstitut ,, die Begnadeten'' </strong> </h3>
+
+    {%  if info["anrede"] == "mann"  %}
+            <h3 style="text-align:left ;"> <strong>  Willkommen zurück Herr  {{ info["vorname"] }}   {{ info["nachname"]}} ! </strong> <span style="font-size: 50px;">👋</span> </h3>
+     {% endif %}
+
+    {%  if info["anrede"] == "frau"  %}
+            <h3 style="text-align:left ;"> <strong>  Willkommen zurück Frau {{ info["vorname"] }}   {{ info["nachname"]}} ! </strong> <span style="font-size: 50px;">👋</span> </h3>
+    {% endif %}
+
+ </div>
+ <div  class= "container_4" >
+ <div  class= " box ">
+
+ <p class= "mb-3"  style="text-align:left ;" >  <h2> Neuigkeiten ! </h2>   </p>
+ <div >
+ <ul>
+    {%  if data %}
+    {% for new in data %}
+    <li style="text-align:left;" class="mb-2"><a href={{new["url"]}}>{{ new["name"] }}</a><p></p></li>
+    {% endfor %}
+    {% endif %}
+ </ul>
+
+ </div>
+
+ </div>
+ <div   class = " box ">
+
+ {% if info["course"] %}
+ <p class= "mb-3"> <h2>  Besuchter  Kurs : <strong> {{ info["course"] }} </strong>  </h2> </p>
+ <p  class= "mb-3" > <h4>   Übersich über unseren {{info["course"]}}-Kurs    </h4> </p>
+ <p class= "mb-2" > <strong>  Zeitraum:<strong> </p>
+ <p class= "mb-3" > von {{kursinfo["Zeitraum"]["von"]}} bis  {{kursinfo["Zeitraum"]["bis"]}}   </p>
+ <p class= "mb-2" > Aktuelle Anzahl von Teilnehmer   </p>
+ <p>  <strong> {{count}} </strong> Teilnehmer</p>
+ {% else %}
+           <p> Kein Besuchter Kurs</p>
+ {% endif %}
+
+ </div>
+
+ </div>
+
+
+{%  endblock %}

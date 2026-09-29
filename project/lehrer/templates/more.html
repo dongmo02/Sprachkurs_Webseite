@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<script>
+         document.addEventListener('DOMContentLoaded', function() {
+             setInterval(function () {
+             let inputs=document.querySelectorAll("input")
+             let allinput=true ;
+             for (let input of inputs )
+              {
+
+                     if(! input.value)
+                       {
+                           allinput=false ;
+                           let aktiv = document.querySelector(".aktiv")
+                           aktiv.disabled = true ; ;
+                       }
+
+              }
+
+              let select = document.querySelector(".choise")
+              let allselect= false;
+              if  ( select.value != "z"  )
+                   {
+                        allselect = true ;
+                     }
+              console.log(allselect , allinput)
+              if (  allselect &&  allinput)
+                 {
+                    let aktiv = document.querySelector(".aktiv")
+                    aktiv.disabled = false ;
+
+                 }
+          } , 500);
+
+
+         });
+
+</script>
+
+    <form action="/more" method="post">
+     <h2 class=" white mb-4"> <strong> Persönliche  Informationen   </strong> </h2>
+     <div  class="log">
+     <div   class="right">
+         <div style= " padding:0px;" class="mb-4">
+              <select style= " text-align:left ;"  name="anrede">
+                   <option selected disabled>  <strong> Choose the Satutation  </strong></option>
+                   <option  value="mann">Herr</option>
+                   <option  value="frau"> Frau</option>
+              </select>
+
+         </div>
+        <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="nachname" placeholder="Firstname" type="text">
+        </div>
+
+        <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="vorname" placeholder="Secondname" type="text">
+        </div>
+
+         <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="geburt" placeholder="Birthday" type="date">
+        </div>
+
+        <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="geburtsort" placeholder="Birthplace" type="text">
+        </div>
+        <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="nummer" placeholder="Phone number" type="text">
+         </div>
+
+        </div>
+
+      <div class= " container left">
+
+        <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="email" placeholder="Email" type="email">
+         </div>
+
+         <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="adresse" placeholder="Street and Housenumber" type="text">
+         </div>
+
+         <div class="mb-4">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="wohnort" placeholder="Zip nummer and City" type="text">
+         </div>
+
+
+         <div class=" container mb-4">
+             <label  class= "   mb-2 weak ">   What level do you teach ? </label>
+              <select   class ="choise" name="course">
+                <option  value= "z" selected  disabled>  Choose  your course</option>
+                <option value= "A1" > A1-Course </option>
+                <option id="enough1" value= "A2" > A2_Course </option>
+                <option id="enough2" value= "B1" > B1-Course </option>
+                <option id="enough3" value= "B2" > B2-Course </option>
+                <option id="enough4" value= "C1" > C1-Course </option>
+
+              </select>
+        </div>
+
+      </div>
+      </div>
+
+        <button class=" aktiv black mt-5 btn btn-primary" type="submit" disabled> Bestätigen </button>
+    </form>
+
+
+{% endblock %}

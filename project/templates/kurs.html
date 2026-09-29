@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Kurs
+{% endblock %}
+{% block main %}
+
+<h3  class="mb-5"  style="text-align:left ;"> <strong> Meine Kurse </strong> </h3>
+<div class= "container_2">
+ <!-- Aktueller Kurs  -->
+{% if info["course"] != "None" %}
+<div  class="box_2">
+    <a href="/mykurs" class="btn-custom">
+        <strong>  {{info["course"]}} </strong>
+    </a>
+</div>
+{% else %}
+  <h4 class="white"><strong> Kein verfügbarer Kurs </strong></h4>
+{% endif %}
+</div>
+<h3     class="mb-5 mt-5" style="text-align:left ;"> <strong> Andere Kurse  </strong> </h3>
+<div  class="container_1">
+
+<!-- A1  -->
+<div  class="box_2">
+    <a href="/kursinfo_A1" class="btn-custom">
+        <strong> A1 </strong>
+    </a>
+</div>
+
+<!-- A2  -->
+<div  class="box_2">
+    <a href="/kursinfo_A2" class="btn-custom">
+        <strong> A2 </strong>
+    </a>
+</div>
+
+<!-- B1 -->
+<div  class="box_2">
+    <a href="/kursinfo_B1" class="btn-custom">
+        <strong> B1 </strong>
+    </a>
+</div>
+<!-- B2 -->
+<div  class="box_2">
+    <a href="/kursinfo_B2" class="btn-custom">
+        <strong> B2 </strong>
+    </a>
+</div>
+<!-- c1 -->
+<div  class="box_2">
+    <a href="/kursinfo_C1" class="btn-custom">
+        <strong> C1 </strong>
+    </a>
+</div>
+</div>
+{% endblock %}

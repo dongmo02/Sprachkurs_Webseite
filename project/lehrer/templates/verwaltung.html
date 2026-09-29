@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Nutzer Name
+{% endblock %}
+{% block main %}
+<h2 class= " mb-5 white">  <strong> Verwaltung vom {{info["course"]}}-Kurs </strong> </h2>
+<div style="margin-top:150px" class=" container_2  ">
+    <div class="container">
+
+        <div class="mb-5">
+            <form action="/change" method="post">
+            <div style="display:flex">
+            <div class="mx-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="startsdatum" placeholder="Startsdatum ändern" type="text">
+            </div>
+            <div>
+            <button class="black btn btn-primary" type="submit">Ändern</button>
+            </div>
+            </div>
+            </form>
+        </div>
+
+
+         <div class="mb-5">
+            <form action="/change" method="post">
+            <div style="display:flex">
+            <div class="mx-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="endsdatum" placeholder="Endsdatum ändern" type="text">
+            </div>
+            <div>
+            <button class="black btn btn-primary" type="submit">Ändern</button>
+            </div>
+            </div>
+            </form>
+        </div>
+
+        <div class="mb-5">
+            <form action="/change" method="post">
+            <div style="display:flex">
+            <div class="mx-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="preis" placeholder="Preis ändern" type="text">
+            </div>
+            <div>
+            <button class="black btn btn-primary" type="submit">Ändern</button>
+            </div>
+            </div>
+           </form>
+        </div>
+
+
+    </div>
+
+    <div class="container">
+
+            <div  class="mb-5">
+            <form action="/change" method="post">
+            <div style="display:flex">
+            <div class="mx-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="course" placeholder="Kursuhrzeit ändern" type="text">
+            </div>
+            <div>
+            <button class="black btn btn-primary" type="submit">Ändern</button>
+            </div>
+            </div>
+            </form>
+        </div>
+        <div  class="mb-5">
+            <form action="/change" method="post">
+            <div style="display:flex">
+            <div class="mx-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="uebung" placeholder="Übungsuhrzeit ändern" type="text">
+            </div>
+            <div>
+            <button class="black btn btn-primary" type="submit">Ändern</button>
+            </div>
+            </div>
+            </form>
+        </div>
+
+        <div  class="mb-5 ">
+            <form action="/change" method="post">
+            <div style="display:flex">
+            <div class="mx-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="ort" placeholder="Standsort ändern" type="text">
+            </div>
+            <div>
+            <button class="black btn btn-primary" type="submit">Ändern</button>
+            </div>
+            </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+ {% if message  %}
+
+      <p style="color:green ;" class="mt-5"> <strong> {{ message }}</strong></p>
+
+    {% endif %}
+
+     {% if messages  %}
+
+      <p style="color:red ;" class="mt-5"> <strong> {{ messages }}</strong></p>
+
+    {% endif %}
+
+
+{% endblock %}

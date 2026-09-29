@@ -1,0 +1,1198 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+.ma_table,tr,td
+{
+    border:1px solid black ;
+    padding:10px;
+}
+.table1
+{
+    border:1px solid black ;
+    padding:10px;
+
+}
+
+.table2
+{
+   border:1px solid black ;
+   padding:10px;
+}
+
+.right {
+    width: 50%;
+    height: 50% ;
+    padding: 20px;
+    margin-right:500px
+}
+
+.left {
+    width: 50%;
+    height: 50% ;
+    padding: 20px;
+}
+
+.log {
+
+      display: flex;
+}
+.black
+    {
+        background-color: red ;
+        border: #e63946;
+
+    }
+ .white
+     {
+        color: red;
+     }
+
+.form {
+
+    width: 600px;
+    height:400px ;
+    text-align:center ;
+    background-color: #2b2b2b;
+
+    padding: 70px;
+
+    border: 2px solid #2b2b2b;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+.form2 {
+
+    width: 600px;
+    height:400px ;
+    text-align:center ;
+    background-color: #2b2b2b;
+
+    padding: 70px;
+
+    border: 2px solid #2b2b2b;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+.ted
+{
+
+   display: none ;
+
+}
+
+
+.link
+{
+    margin-right:200px
+
+}
+.container_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 0px;
+    margin-top:100px;
+}
+
+
+.container_4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 80px;
+    border: 1px solid   #EAEAEA;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+    padding:20px;
+    margin-top:5px
+
+}
+.container4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 80px;
+
+
+
+}
+
+.container4 {
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    gap: 10px;
+}
+.container_0
+{
+   margin-left:50px ;
+}
+
+.box {
+    border: 2px solid  #1f1f1f;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top:100px ;
+    background-color: #1f1f1f;
+    color: red ;
+}
+
+.box_2
+{
+    padding: 0px;
+}
+
+td,tr,table{
+       border: 2px solid
+}
+
+table {
+    margin: 0 auto;
+}
+
+
+.container_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 40px;
+    justify-content: center;
+
+
+}
+
+.btn-custom {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+    padding: 90px 120px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+}
+
+.btn-custom:hover {
+    background-color: #d62839;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.link{
+
+   text-align:left;
+}
+
+
+.container1 {
+    background-color: #EAEAEA;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    width: 400px;
+    margin-top:80px
+}
+
+.container-header {
+    background-color:#1f1f1f;
+    padding:20px ;
+}
+
+.container-body {
+    background-color: #EAEAEA;
+}
+.size{
+    width:300px ;
+    height:200px;
+}
+.size2{
+
+    position:absolute ;
+    left:450px ;
+}
+.size4{
+
+    position:absolute ;
+    left:450px ;
+}
+
+.size3{
+
+    position:absolute ;
+    left:600px ;
+}
+
+.new_prüfung{
+    border: 1px solid   #EAEAEA;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+    padding:20px;
+    margin-top:10px;
+    width:800px;
+}
+
+.more{
+
+    width:300px;
+    height:180px ;
+    text-align:center ;
+    margin-bottom:20px ;
+}
+
+.btn-link-style {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #0d6efd;
+    cursor: pointer;
+    font: inherit;
+}
+
+.btn-link-style:hover {
+    color: #0a58ca;
+}
+.log label {
+    display: block;
+    margin-left: 30px;
+}
+
+.log input {
+    margin-left: 20px;
+}
+
+/* =========================================
+   PUNKTEVERGABE
+   ========================================= */
+
+.punkte-container {
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   HAUPT-CONTAINER
+   ========================================= */
+
+.punkte-card {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 45px 50px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.10);
+
+    border: 1px solid #eeeeee;
+}
+
+
+/* =========================================
+   TITEL
+   ========================================= */
+
+.punkte-title {
+    text-align: center;
+
+    color: #e63946;
+
+    font-size: 34px;
+
+    margin-bottom: 40px;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   EXAM INFORMATIONEN
+   ========================================= */
+
+.exam-info {
+    background: #fff5f6;
+
+    border-radius: 14px;
+
+    padding: 22px 25px;
+
+    margin-bottom: 35px;
+
+    border: 1px solid #ffe0e3;
+}
+
+
+.info-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #ffe3e6;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+}
+
+
+.info-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 17px;
+}
+
+
+.info-content strong {
+    min-width: 120px;
+}
+
+
+.info-content span {
+    color: #555;
+}
+
+
+/* =========================================
+   MODULE
+   ========================================= */
+
+.module-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.module-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    width: 100%;
+
+    padding: 20px 22px;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    transition: 0.2s ease;
+}
+
+
+.module-box:hover {
+    border-color: #f1a5ab;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.07);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MODULE ICON
+   ========================================= */
+
+.module-icon {
+    flex-shrink: 0;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #fff0f1;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+}
+
+
+/* =========================================
+   MODULE CONTENT
+   ========================================= */
+
+.module-content {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.module-label {
+    min-width: 110px;
+
+    font-size: 18px;
+
+    color: #222;
+}
+
+
+/* =========================================
+   INPUT
+   ========================================= */
+
+.punkte-input {
+    flex: 1;
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    font-size: 16px;
+
+    border: 1px solid #ced4da;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+
+.punkte-input::placeholder {
+    color: #999;
+}
+
+
+.punkte-input:focus {
+    border-color: #e63946;
+
+    box-shadow:
+        0 0 0 3px rgba(230, 57, 70, 0.12);
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.punkte-button {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 35px auto 0 auto;
+
+    padding: 13px 35px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #e63946;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    box-shadow:
+        0 5px 15px rgba(230, 57, 70, 0.25);
+}
+
+
+.punkte-button:hover {
+    background: #d62f3c;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(230, 57, 70, 0.30);
+}
+
+
+.punkte-button:active {
+    transform: translateY(0);
+}
+
+
+.button-icon {
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .punkte-container {
+        margin-top: 40px;
+
+        padding: 10px;
+    }
+
+
+    .punkte-card {
+        padding: 30px 20px;
+    }
+
+
+    .punkte-title {
+        font-size: 28px;
+    }
+
+
+    .info-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 2px;
+    }
+
+
+    .info-content strong {
+        min-width: auto;
+    }
+
+
+    .module-box {
+        align-items: flex-start;
+    }
+
+
+    .module-content {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+
+    .module-label {
+        min-width: auto;
+    }
+
+
+    .punkte-input {
+        width: 100%;
+    }
+
+}
+
+/* =====================================================
+   NEUE PRÜFUNG
+   ===================================================== */
+
+.exam-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    padding: 70px 20px 80px 20px;
+}
+
+
+/* =====================================================
+   HAUPT-CARD
+   ===================================================== */
+
+.exam-card {
+    width: 100%;
+    max-width: 1050px;
+
+    background: #ffffff;
+
+    padding: 45px 60px;
+
+    border-radius: 20px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =====================================================
+   TITEL
+   ===================================================== */
+
+.exam-title {
+    text-align: center;
+
+    color: #e63946;
+
+    font-size: 36px;
+
+    margin-bottom: 45px;
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   DATUM / ORT
+   ===================================================== */
+
+.exam-input-row {
+    display: grid;
+
+    grid-template-columns: 55px 120px 1fr;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px 25px;
+
+    margin-bottom: 15px;
+
+    background: #fff6f7;
+
+    border-radius: 12px;
+
+    border: 1px solid #ffe3e6;
+}
+
+
+.exam-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #ffe4e7;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+
+.exam-label {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #222;
+}
+
+
+.exam-input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 15px;
+
+    border: 1px solid #ced4da;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.exam-input:focus {
+    border-color: #e63946;
+
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.10);
+}
+
+
+/* =====================================================
+   MODULE TITEL
+   ===================================================== */
+
+.module-title {
+    text-align: center;
+
+    font-size: 24px;
+
+    margin-top: 40px;
+    margin-bottom: 25px;
+
+    color: #20242a;
+}
+
+
+/* =====================================================
+   MODULE BUTTONS
+   ===================================================== */
+
+.module-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.module-button {
+    min-height: 95px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    background: white;
+
+    border: 1px solid #d9dee3;
+
+    border-radius: 12px;
+
+    color: #20242a;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.module-button:hover {
+    border-color: #e63946;
+
+    color: #e63946;
+
+    background: #fff7f8;
+
+    transform: translateY(-2px);
+}
+
+
+/* Bootstrap fügt aria-expanded hinzu */
+.module-button[aria-expanded="true"] {
+    color: #e63946;
+
+    border: 2px solid #e63946;
+
+    background: #fff3f4;
+
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.10);
+}
+
+
+.module-button-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #ffe7e9;
+
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   MODULE PANEL
+   ===================================================== */
+
+.module-panels {
+    width: 100%;
+}
+
+
+.module-panel {
+    padding: 30px;
+
+    margin-top: 10px;
+
+    background: #fff6f7;
+
+    border: 1px solid #ffe0e3;
+
+    border-radius: 15px;
+}
+
+
+/* =====================================================
+   MODULE HEADER
+   ===================================================== */
+
+.module-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #f2d9dc;
+}
+
+
+.module-large-icon {
+    width: 60px;
+    height: 60px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #ffe2e5;
+
+    font-size: 28px;
+}
+
+
+.module-header h3 {
+    margin: 0 0 5px 0;
+
+    font-size: 24px;
+
+    color: #222;
+}
+
+
+.module-header p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   UHRZEIT / RAUM
+   ===================================================== */
+
+.module-detail {
+    display: grid;
+
+    grid-template-columns: 45px 100px 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.detail-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #ffe4e7;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+
+.module-detail label {
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #222;
+}
+
+
+.detail-input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border: 1px solid #ced4da;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.detail-input:focus {
+    border-color: #e63946;
+
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.10);
+}
+
+
+.time-input {
+    max-width: 300px;
+}
+
+
+/* =====================================================
+   CHECKBOX
+   ===================================================== */
+
+.module-check {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 10px;
+
+    font-size: 15px;
+
+    color: #555;
+}
+
+
+.module-check input {
+    width: 18px;
+    height: 18px;
+
+    accent-color: #e63946;
+}
+
+
+/* =====================================================
+   BESTÄTIGEN
+   ===================================================== */
+
+.exam-submit {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 35px auto 0 auto;
+
+    padding: 14px 38px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #e63946;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 18px rgba(230, 57, 70, 0.25);
+
+    transition: all 0.2s ease;
+}
+
+
+.exam-submit:hover {
+    background: #d52f3c;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.30);
+}
+
+
+.exam-submit:active {
+    transform: translateY(0);
+}
+
+
+.exam-submit span {
+    font-size: 21px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .exam-card {
+        padding: 35px 25px;
+    }
+
+
+    .exam-title {
+        font-size: 30px;
+    }
+
+
+    .module-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .exam-input-row {
+        grid-template-columns: 50px 1fr;
+
+        gap: 12px;
+    }
+
+
+    .exam-input {
+        grid-column: 2;
+    }
+
+
+    .module-detail {
+        grid-template-columns: 45px 1fr;
+    }
+
+
+    .module-detail .detail-input {
+        grid-column: 2;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .exam-page {
+        padding: 30px 10px;
+    }
+
+
+    .exam-card {
+        padding: 25px 15px;
+    }
+
+
+    .exam-title {
+        font-size: 26px;
+    }
+
+
+    .module-buttons {
+        grid-template-columns: 1fr;
+    }
+
+
+    .module-panel {
+        padding: 20px 15px;
+    }
+
+
+    .module-header {
+        align-items: flex-start;
+    }
+
+}

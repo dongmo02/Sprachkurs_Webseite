@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ change password
+{% endblock %}
+
+{% block main %}
+<div class=" container form2">
+     <h3 class="white mb-3"> <strong> Reset passwort  </strong> </h3>
+<form action="/reset"  method="post">
+       <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" name="oldpassword" placeholder="Old Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off"  class="form-control mx-auto w-auto" name="password" placeholder="New Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input  autocomplete="off" class="form-control mx-auto w-auto" name="confirmation" placeholder="Confirm Password" type="password">
+        </div>
+        <div>
+        <button class=" mb-1 black btn btn-primary" type="submit">Change Password</button>
+        </div>
+</form>
+</div>
+
+{% endblock %}

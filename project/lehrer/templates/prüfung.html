@@ -1,0 +1,505 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    prüfung
+{% endblock %}
+
+{% block main %}
+
+<div class="exam-page">
+
+    <div class="exam-card">
+
+        <!-- Titel -->
+        <h2 class="exam-title">
+            <strong>Neue Prüfung erstellen</strong>
+        </h2>
+
+
+        <form action="/pruefung" method="post">
+
+
+            <!-- ========================= -->
+            <!-- DATUM -->
+            <!-- ========================= -->
+
+            <div class="exam-input-row">
+
+                <div class="exam-icon">
+                    📅
+                </div>
+
+                <label class="exam-label">
+                    Datum:
+                </label>
+
+                <input
+                    autocomplete="off"
+                    autofocus
+                    class="exam-input"
+                    name="date"
+                    type="date"
+                >
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- ORT -->
+            <!-- ========================= -->
+
+            <div class="exam-input-row">
+
+                <div class="exam-icon">
+                    📍
+                </div>
+
+                <label class="exam-label">
+                    Ort:
+                </label>
+
+                <input
+                    autocomplete="off"
+                    class="exam-input"
+                    name="ort"
+                    placeholder="Ort eingeben"
+                    type="text"
+                >
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- MODULE -->
+            <!-- ========================= -->
+
+            <h4 class="module-title">
+                Wählen Sie die zu abgelegte Module:
+            </h4>
+
+
+            <div class="module-buttons">
+
+                <!-- SCHREIBEN -->
+
+                <button
+                    class="module-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Schreiben"
+                    aria-expanded="false"
+                    aria-controls="Schreiben">
+
+                    <span class="module-button-icon">✎</span>
+
+                    <span>Schreiben</span>
+
+                </button>
+
+
+                <!-- HÖREN -->
+
+                <button
+                    class="module-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Hören"
+                    aria-expanded="false"
+                    aria-controls="Hören">
+
+                    <span class="module-button-icon">🎧</span>
+
+                    <span>Hören</span>
+
+                </button>
+
+
+                <!-- SPRECHEN -->
+
+                <button
+                    class="module-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Sprechen"
+                    aria-expanded="false"
+                    aria-controls="Sprechen">
+
+                    <span class="module-button-icon">🔊</span>
+
+                    <span>Sprechen</span>
+
+                </button>
+
+
+                <!-- LESEN -->
+
+                <button
+                    class="module-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Lesen"
+                    aria-expanded="false"
+                    aria-controls="Lesen">
+
+                    <span class="module-button-icon">📖</span>
+
+                    <span>Lesen</span>
+
+                </button>
+
+            </div>
+
+
+            <!-- ================================= -->
+            <!-- MODULE CONTAINER -->
+            <!-- ================================= -->
+
+            <div class="module-panels">
+
+
+                <!-- ============================= -->
+                <!-- SCHREIBEN -->
+                <!-- ============================= -->
+
+                <div
+                    class="collapse module-panel"
+                    id="Schreiben"
+                    data-bs-parent=".module-panels">
+
+                    <div class="module-header">
+
+                        <div class="module-large-icon">
+                            ✎
+                        </div>
+
+                        <div>
+                            <h3>Schreiben</h3>
+
+                            <p>
+                                Geben Sie die Details für das Modul Schreiben ein.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="module-detail">
+
+                        <div class="detail-icon">
+                            🕐
+                        </div>
+
+                        <label>
+                            Uhrzeit:
+                        </label>
+
+                        <input
+                            autocomplete="off"
+                            class="detail-input time-input"
+                            name="time_w"
+                            type="time"
+                        >
+
+                    </div>
+
+
+                    <div class="module-detail">
+
+                        <div class="detail-icon">
+                            📍
+                        </div>
+
+                        <label>
+                            Raum:
+                        </label>
+
+                        <input
+                            autocomplete="off"
+                            class="detail-input"
+                            name="room_w"
+                            placeholder="Raum eingeben (z. B. A101)"
+                            type="text"
+                        >
+
+                    </div>
+
+
+                    <label class="module-check">
+                        <input
+                            autocomplete="off"
+                            name="module"
+                            value="Schreiben"
+                            type="checkbox"
+                        >
+                        Schreiben auswählen
+                    </label>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- HÖREN -->
+                <!-- ============================= -->
+
+                <div
+                    class="collapse module-panel"
+                    id="Hören"
+                    data-bs-parent=".module-panels">
+
+                    <div class="module-header">
+
+                        <div class="module-large-icon">
+                            🎧
+                        </div>
+
+                        <div>
+                            <h3>Hören</h3>
+
+                            <p>
+                                Geben Sie die Details für das Modul Hören ein.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="module-detail">
+
+                        <div class="detail-icon">
+                            🕐
+                        </div>
+
+                        <label>
+                            Uhrzeit:
+                        </label>
+
+                        <input
+                            autocomplete="off"
+                            class="detail-input time-input"
+                            name="time_h"
+                            type="time"
+                        >
+
+                    </div>
+
+
+                    <div class="module-detail">
+
+                        <div class="detail-icon">
+                            📍
+                        </div>
+
+                        <label>
+                            Raum:
+                        </label>
+
+                        <input
+                            autocomplete="off"
+                            class="detail-input"
+                            name="room_h"
+                            placeholder="Raum eingeben (z. B. A101)"
+                            type="text"
+                        >
+
+                    </div>
+
+
+                    <label class="module-check">
+                        <input
+                            autocomplete="off"
+                            name="module"
+                            value="Hören"
+                            type="checkbox"
+                        >
+                        Hören auswählen
+                    </label>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- SPRECHEN -->
+                <!-- ============================= -->
+
+                <div
+                    class="collapse module-panel"
+                    id="Sprechen"
+                    data-bs-parent=".module-panels">
+
+                    <div class="module-header">
+
+                        <div class="module-large-icon">
+                            🔊
+                        </div>
+
+                        <div>
+                            <h3>Sprechen</h3>
+
+                            <p>
+                                Geben Sie die Details für das Modul Sprechen ein.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="module-detail">
+
+                        <div class="detail-icon">
+                            🕐
+                        </div>
+
+                        <label>
+                            Uhrzeit:
+                        </label>
+
+                        <input
+                            autocomplete="off"
+                            class="detail-input time-input"
+                            name="time_s"
+                            type="time"
+                        >
+
+                    </div>
+
+
+                    <div class="module-detail">
+
+                        <div class="detail-icon">
+                            📍
+                        </div>
+
+                        <label>
+                            Raum:
+                        </label>
+
+                        <input
+                            autocomplete="off"
+                            class="detail-input"
+                            name="room_s"
+                            placeholder="Raum eingeben (z. B. A101)"
+                            type="text"
+                        >
+
+                    </div>
+
+
+                    <label class="module-check">
+                        <input
+                            autocomplete="off"
+                            name="module"
+                            value="Sprechen"
+                            type="checkbox"
+                        >
+                        Sprechen auswählen
+                    </label>
+
+                </div>
+
+
+
+                <!-- ============================= -->
+                <!-- LESEN -->
+                <!-- ============================= -->
+
+                <div
+                    class="collapse module-panel"
+                    id="Lesen"
+                    data-bs-parent=".module-panels">
+
+                    <div class="module-header">
+
+                        <div class="module-large-icon">
+                            📖
+                        </div>
+
+                        <div>
+                            <h3>Lesen</h3>
+
+                            <p>
+                                Geben Sie die Details für das Modul Lesen ein.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="module-detail">
+
+                        <div class="detail-icon">
+                            🕐
+                        </div>
+
+                        <label>
+                            Uhrzeit:
+                        </label>
+
+                        <input
+                            autocomplete="off"
+                            class="detail-input time-input"
+                            name="time_l"
+                            type="time"
+                        >
+
+                    </div>
+
+
+                    <div class="module-detail">
+
+                        <div class="detail-icon">
+                            📍
+                        </div>
+
+                        <label>
+                            Raum:
+                        </label>
+
+                        <input
+                            autocomplete="off"
+                            class="detail-input"
+                            name="room_l"
+                            placeholder="Raum eingeben (z. B. A101)"
+                            type="text"
+                        >
+
+                    </div>
+
+
+                    <label class="module-check">
+                        <input
+                            autocomplete="off"
+                            name="module"
+                            value="Lesen"
+                            type="checkbox"
+                        >
+                        Lesen auswählen
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- BESTÄTIGEN -->
+            <!-- ========================= -->
+
+            <button
+                class="exam-submit"
+                type="submit">
+
+                <span>✓</span>
+                Bestätigen
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

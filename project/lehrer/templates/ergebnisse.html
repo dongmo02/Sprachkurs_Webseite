@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Nutzer Name
+{% endblock %}
+{% block main %}
+<h2 class="mb-5 white ">  <strong> Verwaltung und Punktesvergabe </strong></h2>
+<h4 class="mb-4" style="text-align:left" ><u><strong>Aktuelle Prüfungen</strong></u></h4>
+<ul style="text-align:left">
+    {% if daten %}
+    {% for element in daten %}
+    <li class="mb-3">
+        <form action="/ergebnis" method="post">
+            <input  type="hidden" value ={{element["exam_id"]}}   name="prüfung">
+            <button  class="btn-link-style" type="submit"> Prüfung_{{element["exam_id"]}}</button>
+        </form>
+    </li>
+    {%  endfor %}
+    {%  endif %}
+
+</ul>
+
+{% endblock %}

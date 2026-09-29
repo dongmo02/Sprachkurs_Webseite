@@ -1,0 +1,354 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+.ma_table,tr,td
+{
+    border:1px solid black ;
+    padding:10px;
+}
+.table1
+{
+    border:1px solid black ;
+    padding:10px;
+
+}
+
+.table2
+{
+   border:1px solid black ;
+   padding:10px;
+}
+
+.right {
+    width: 50%;
+    height: 50% ;
+    padding: 20px;
+    margin-right:500px
+}
+
+.left {
+    width: 50%;
+    height: 50% ;
+    padding: 20px;
+}
+
+.log {
+
+      display: flex;
+}
+.black
+    {
+        background-color: red ;
+        border: #e63946;
+
+    }
+ .white
+     {
+        color: red;
+     }
+
+.form {
+
+    width: 600px;
+    height:400px ;
+    text-align:center ;
+    background-color: #2b2b2b;
+
+    padding: 70px;
+
+    border: 2px solid #2b2b2b;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+.form2 {
+
+    width: 600px;
+    height:400px ;
+    text-align:center ;
+    background-color: #2b2b2b;
+
+    padding: 70px;
+
+    border: 2px solid #2b2b2b;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+.ted
+{
+
+   display: none ;
+
+}
+
+
+.link
+{
+    margin-right:200px
+
+}
+.container_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    width:800px;
+    height:451px;
+}
+.container_4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 80px;
+    border: 1px solid   #EAEAEA;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 15px;
+    padding:20px;
+    margin-top:5px
+
+}
+.container4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 80px;
+
+
+
+}
+.container7 {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 80px;
+}
+
+.container3.0 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 80px;
+}
+.container_0
+{
+   margin-left:50px ;
+}
+
+.box {
+    border: 2px solid  #1f1f1f;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top:100px ;
+    background-color: #1f1f1f;
+    color: red ;
+}
+
+.box_2
+{
+    padding: 0px;
+}
+
+td,tr,table{
+       border: 2px solid
+}
+
+table {
+    margin: 0 auto;
+}
+
+
+.container_2 {
+    display: flex;
+    gap: 10px;
+
+}
+
+.btn-custom {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+    padding: 90px 120px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    transition: 0.2s;
+}
+
+.btn-custom:hover {
+    background-color: #d62839;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.link{
+
+   text-align:left;
+}
+
+
+.container1 {
+    background-color: #EAEAEA;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    width: 400px;
+    margin-top:100px;
+}
+.container6 {
+    background-color: #EAEAEA;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    margin-top:60px;
+    margin-bottom:100px;
+    width:600px;
+}
+
+.container-header {
+    background-color:#1f1f1f;
+    padding:20px ;
+}
+
+.container-body {
+    background-color: #EAEAEA;
+    height:200px;
+}
+
+/* ========================================= */
+/* NEUE PRÜFUNGEN */
+/* ========================================= */
+
+
+
+/* ========================================= */
+/* EINE PRÜFUNG */
+/* ========================================= */
+
+.pruefung {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 20px;
+    width: 350px;
+}
+
+
+/* ========================================= */
+/* MEINE PRÜFUNG */
+/* ========================================= */
+
+.meine-pruefung {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 25px;
+    justify-content: center;
+}
+
+
+/* ========================================= */
+/* MODULE */
+/* ========================================= */
+
+.module-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+
+/* ========================================= */
+/* EINZELNES MODUL */
+/* ========================================= */
+
+.module {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+
+/* Modulüberschrift */
+
+.module h4 {
+    margin-bottom: 20px;
+}
+
+
+/* Informationen */
+
+.module-info p {
+    margin-bottom: 15px;
+}
+
+
+/* Ergebnis Button */
+
+.result-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: #e63946;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* Ergebnis */
+
+.result {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+
+/* ========================================= */
+/* TABLET */
+/* ========================================= */
+
+@media (max-width: 992px) {
+
+    .module-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ========================================= */
+/* HANDY */
+/* ========================================= */
+
+@media (max-width: 576px) {
+
+    .module-container {
+        grid-template-columns: 1fr;
+    }
+
+}

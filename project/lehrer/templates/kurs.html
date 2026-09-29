@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Nutzer Name
+{% endblock %}
+{% block main %}
+<div  class= "mb-5" >
+<h2 class="white"> <strong> <u>{{info["course"]}}-Kurs </u></strong></h2>
+</div>
+<ul  class= "mb-5">
+<li>
+<div  style="text-align:left;" class= "mb-4">
+    <a href="/verwaltung">  <strong> Verwaltung </strong> </a>
+</div>
+</li>
+<li>
+<div  style="text-align:left;"  class= "mb-3">
+    <a href="/teilnehmer"> <strong> Teilnehmer </strong> </a>
+</div>
+</li>
+</ul>
+
+<form action="/kurs"  method="post">
+<div  class="container container_1 mb-5">
+    <div class= "boxe">
+      <textarea rows="5" autocomplete="off" autofocus class=" size form-control mx-auto " name="übung" placeholder="Übungen Hinzufügen" type="text"></textarea>
+    </div>
+
+    <div class="boxe">
+         <textarea  rows="5" autocomplete="off" autofocus class=" size form-control mx-auto " name="stand" placeholder="Aktueller Stand im Programm" type="text"></textarea>
+
+    </div>
+</div>
+    <div style="margin-top:100px">
+    <button class="black btn btn-primary" type="submit">Send</button>
+    </div>
+</form>
+
+{% endblock %}

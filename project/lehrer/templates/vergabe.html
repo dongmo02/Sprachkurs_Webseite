@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Nutzer Name
+{% endblock %}
+
+{% block main %}
+
+<div class="punkte-container">
+
+    <div class="punkte-card">
+
+        <h2 class="punkte-title">
+            <strong>Punktevergabe</strong>
+        </h2>
+
+
+        <!-- Studenteninformationen -->
+
+        <div class="exam-info">
+
+            <div class="info-row">
+                <div class="info-icon">
+                    👤
+                </div>
+
+                <div class="info-content">
+                    <strong>Studentsname:</strong>
+                    <span>{{ daten["name"] }}</span>
+                </div>
+            </div>
+
+
+            <div class="info-row">
+                <div class="info-icon">
+                    📋
+                </div>
+
+                <div class="info-content">
+                    <strong>Exam_id:</strong>
+                    <span>{{ daten["exam_id"] }}</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Punktevergabe -->
+
+        <form action="/p_vergabe" method="post">
+
+            <div class="module-container">
+
+                {% for module in daten["modules"] %}
+
+                <div class="module-box">
+
+                    <div class="module-icon">
+
+                        {% if module == "Lesen" %}
+                            📖
+                        {% elif module == "Hören" %}
+                            🎧
+                        {% elif module == "Schreiben" %}
+                            ✏️
+                        {% else %}
+                            📝
+                        {% endif %}
+
+                    </div>
+
+                    <div class="module-content">
+
+                        <label class="module-label" for="module">
+                            <strong>{{ module }}:</strong>
+                        </label>
+
+                        <input
+                            autocomplete="off"
+                            id="module"
+                            autofocus
+                            name="{{ module }}"
+                            placeholder="Geben Sie eine Note ein"
+                            type="text"
+                            class="punkte-input"
+                        >
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+
+            <!-- Bestätigen -->
+
+            <button class="punkte-button" type="submit">
+                <span class="button-icon">✓</span>
+                Bestätigen
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

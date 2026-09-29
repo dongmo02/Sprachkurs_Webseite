@@ -1,0 +1,181 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Nutzer Name
+{% endblock %}
+
+
+{% block main %}
+
+<!-- ========================================= -->
+<!-- NEUE PRÜFUNGEN -->
+<!-- ========================================= -->
+
+<h2 class="mb-5 white" style="text-align:left;">
+    <strong><u>Neue Prüfungen</u></strong>
+
+</h2>
+ {% if message %}
+ <div class="container6">
+ <p><h4  style="text-align: left;   margin-top:10px; margin-left:80px;"><strong>{{message}}...</strong></h4></p>
+ </div>
+ {% else %}
+<div class="container7">
+
+    <!-- Eine neue Prüfung -->
+
+    {%  for element in Daten %}
+    {%  if not (element["exam_id"] in exam_liste["verwerfen"] or element["exam_id"] in exam_liste["teilnehmen"] )    %}
+    <div class="mb-3 pruefung">
+        <!-- Informationen zur Prüfung -->
+        <div class="pruefung-info">
+
+            <h3>Deutsch {{info["course"]}} Prüfung</h3>
+
+            <p>
+                <strong>Ort: {{element["ort"]}}</strong>
+
+            </p>
+
+            <p>
+                <strong>Datum:</strong>
+                      {{element["date"]}}
+            </p>
+            <form  action="/prüfung"  method="post">
+            <input   value={{ loop.index0 }} name="index"  type="hidden">
+            <input   value="teilnehmen"  name="choise"  type="hidden">
+            <button type="submit" class=" mb-2 btn btn-primary">
+                Teilnehmen
+            </button>
+            </form>
+            <form  action="/prüfung"  method="post">
+            <input   value={{ loop.index0 }} name="index"  type="hidden">
+            <input   value="verwerfen"  name="choise"  type="hidden">
+            <button type="submit" class=" black btn btn-primary">
+                Verwerfen..
+            </button>
+           </form>
+        </div>
+
+
+    </div>
+    {% endif %}
+    {%  endfor %}
+
+</div>
+{% endif %}
+
+<!-- ========================================= -->
+<!-- MEINE PRÜFUNGEN -->
+<!-- ========================================= -->
+<h2 class="mb-3 white" style="text-align:left;">
+    <strong><u>Meine Prüfungen</u></strong>
+</h2>
+{% if message1 %}
+      <div  class="container6">
+          <h4  style="text-align:left; margin-top:20px; margin-left:80px;"><strong> {{message1}}... </strong></h4>
+      </div>
+<div class="container3.0">
+    <!-- ===================================== -->
+    <!-- EINE PRÜFUNG -->
+    <!-- ===================================== -->
+
+    {% else %}
+    {%  for element in  Daten %}
+    {% if element["exam_id"]  not in exam_liste["verwerfen"] %}
+    <div style="margin-bottom:100px;" class=" meine-pruefung">
+        <div class="pruefung-header">
+
+            <h3>Deutsch {{info["course"]}} Prüfung</h3>
+
+            <p>
+                <strong>Datum:</strong>
+                    {{element["date"]}}
+            </p>
+
+            <p>
+                <strong>Ort: </strong>
+                   {{element["ort"]}}
+            </p>
+
+        </div>
+
+        <!-- ================================= -->
+        <!-- DIE 4 MODULE -->
+        <!-- ================================= -->
+        <div class="module-container">
+
+
+            <!-- =============================== -->
+            <!-- LESEN -->
+            <!-- =============================== -->
+         {%  for module in element["modules"]   %}
+            <div class="module">
+
+                <h4>{{module}}</h4>
+
+                <div class="module-info">
+
+                    <p>
+                        <strong>Uhrzeit</strong><br>
+                        {{ element["detail"][module]["time"]}}
+                    </p>
+
+                    <p>
+                        <strong>Raum</strong><br>
+                        {{element["detail"][module]["room"]}}
+                    </p>
+
+                </div>
+
+
+                <!-- Ergebnis Button -->
+
+                <button
+                    class="result-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ergebnisLesen"
+                    aria-expanded="false"
+                    aria-controls="ergebnisLesen">
+
+                    + Ergebnis
+
+                </button>
+
+
+                <!-- Ergebnis -->
+
+                <div class="collapse mt-3" id="ergebnisLesen">
+
+                    <div class="result">
+
+                        <strong>Ergebnis</strong>
+
+                        <p>
+                            {% if ergebnis %}
+                                {%  if ergebnis.get(element["exam_id"])[module] %}
+                                    <p>{{ergebnis.get(element["exam_id"])[module] }}/100</p>
+                                {% endif %}
+
+                            {% else %}
+                                <p> Keine Ergebnisse Verfügbar </p>
+                            {% endif %}
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            {%  endfor %}
+            </div>
+
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            </div>
+            {%endif%}
+
+
+{% endblock %}

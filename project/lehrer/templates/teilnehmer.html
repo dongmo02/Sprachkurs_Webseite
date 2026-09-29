@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Nutzer Name
+{% endblock %}
+{% block main %}
+<h2 class=" white mb-5"> <strong><u>Teilnehmer am {{ info["course"]}}-Kurs</u></strong></h2>
+<ul class="mb-5">
+<li>
+<h4 style="text-align:left ;"  class="mb-5">  <a  href="/anfrage">Teilnahmesanfragen</a></h4>
+</li>
+<li>
+    <h4 style="text-align:left ;" class="mb-5"> <u><strong>Teilnehmer</strong></u></h4>
+</li>
+</ul>
+<ol>
+
+    {% for element in liste   %}
+       <div  style="display:flex">
+        <div  class="mx-4">
+        <li class="mb-3"> {{element["name"]}}</li>
+        </div>
+        <div>
+              <form action="/teilnehmer"  method="post">
+              <input  type="hidden" value={{element["key"]}} name="entfernung">
+              <button class=" size2 black btn btn-primary"  name= type="submit">Raus</button>
+              </form>
+        </div>
+        </div>
+        {%  endfor %}
+
+</ol>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Profil
+{% endblock %}
+{% block main %}
+ <div class="container" style= "justify-content: center;" ></div>
+ <h3 class="mb-5"> Persönliche  Informationen </h3>
+<table>
+ <tr>
+    <td> Nachname </td>
+    <td> {{ info["nachname"] }}  </td>
+ </tr>
+
+ <tr>
+    <td> Vorname </td>
+    <td> {{ info["vorname"] }}  </td>
+
+ </tr>
+
+ <tr>
+    <td> Geburtsdatum </td>
+    <td> {{ info["geburtsdatum"] }}  </td>
+
+ </tr>
+ <tr>
+    <td> Geburtsort </td>
+    <td> {{ info["geburtsort"] }}  </td>
+
+ </tr>
+
+
+
+ <tr>
+    <td> Handysnummer </td>
+    <td> {{ info["nummer"] }}  </td>
+ </tr>
+
+
+ <tr>
+    <td> Email </td>
+    <td> {{ info["email"] }}  </td>
+ </tr>
+
+ <tr>
+    <td> Deutsch-Niveau </td>
+    <td> {{ info["level"] }}  </td>
+ </tr>
+
+ <tr>
+    <td> Besuchter Kurs </td>
+    <td> {{ info["course"] }}  </td>
+ </tr>
+ </table>
+ </div>
+
+
+{% endblock %}

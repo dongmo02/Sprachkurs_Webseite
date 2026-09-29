@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Nutzer Name
+{% endblock %}
+{% block main %}
+  <h2 class = "white"> <strong> <u>Dein Virtualler Kurs </u> </strong></h2>
+  <ul  style=" margin-top:80px " class=" link mb-3">
+    <div>
+    <li > <h4> Nächster Termin:  01.04.2026 </h4></li>
+    </div>
+     <p class="my-3"></p>
+     <li> <h4>Aktuelle Woche:  Woche 0 </h4></li>
+
+  </ul>
+  <div   class= "container4" >
+    <div  class="container1">
+         <div>
+            <p class="white  container-header" > <strong>  Zu bearbeitende  Übungen für den nächsten  Termin </strong> </p>
+         </div>
+
+         <div   class =  "container-body" >
+                <p>{{data["uebung"]}}</p>
+          </div>
+
+    </div>
+
+    <div  class="container1">
+         <div>
+            <p class="white  container-header" > <strong> Was  wurde das letzte Mal gemacht </strong> </p>
+         </div>
+
+         <div   class =  "container-body" >
+                <p> {{data["stand"]}} </p>
+          </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}
